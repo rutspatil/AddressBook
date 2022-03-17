@@ -27,12 +27,18 @@ namespace AddressBook
                     PhoneNumber = Convert.ToDouble(Console.ReadLine()),
                     Email = Console.ReadLine(),
                 };
-                
-                addressBook.displayContact();
-                CreateAddressBook AddressBook = new CreateAddressBook();
-                addressBook.AddContact();
+
+                //addressBook.displayContact();
+                //CreateAddressBook AddressBook = new CreateAddressBook();
+                //addressBook.AddContact();
+                //Console.ReadLine();
+
+                //Showing Welcome Message On console.
+                Console.WriteLine("Welcome to Address Book Progam \n");
+                CreateAddressBook createAddressBook = new CreateAddressBook();
+                createAddressBook.ReadInput();
                 Console.ReadLine();
-            } 
+            }
         }
     }
 }
