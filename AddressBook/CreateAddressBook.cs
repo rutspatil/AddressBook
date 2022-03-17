@@ -61,6 +61,8 @@ namespace AddressBook
                 Console.WriteLine("1.Add contacts");
                 Console.WriteLine("2.Display");
                 Console.WriteLine("3.Edit Details");
+                Console.WriteLine("4.Delete Person");
+                Console.WriteLine("5.Add Multiple Person");
                 Console.WriteLine("0.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -75,6 +77,14 @@ namespace AddressBook
                         Console.WriteLine("Enter the first name of person");
                         string name = Console.ReadLine();
                         addressMain.EditContact(name);
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter the first name of person");
+                        string dName = Console.ReadLine();
+                        addressMain.DeleteContact(dName);
+                        break;
+                    case 5:
+                        AddMultiplePerson();
                         break;
                     case 0:
                         CONTINUE = false;
@@ -107,6 +117,17 @@ namespace AddressBook
             Console.WriteLine("Enter Email");
             string email = Console.ReadLine();
             addressMain.AddContactDetails(firstName, lastName, address, city, state, zipCode, phoneNumber, email);
+        }
+        //Method to Add Multiple Contact
+        public void AddMultiplePerson()
+        {
+            Console.WriteLine("How many contact,you want to Add");
+            int cNumber = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= cNumber; i++)
+            {
+                CreateAddressBook.AddDetails(addressMain);
+            }
+            Console.WriteLine("All Contacts Added successfully! \n");
         }
     }
 }
