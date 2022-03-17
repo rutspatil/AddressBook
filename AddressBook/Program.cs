@@ -10,7 +10,7 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            
+
             {
                 //Showing Welcome Message On console.
                 Console.WriteLine("Welcome to Address Book Progam \n");
@@ -27,9 +27,12 @@ namespace AddressBook
                     PhoneNumber = Convert.ToDouble(Console.ReadLine()),
                     Email = Console.ReadLine(),
                 };
+                
                 addressBook.displayContact();
+                CreateAddressBook AddressBook = new CreateAddressBook();
+                addressBook.AddContact();
                 Console.ReadLine();
-            }
+            } 
         }
     }
 }
