@@ -34,11 +34,16 @@ namespace AddressBook
                 //Console.ReadLine();
 
                 //Showing Welcome Message On console.
-                Console.WriteLine("Welcome to Address Book Progam \n");
-                CreateAddressBook createAddressBook = new CreateAddressBook();
-                createAddressBook.ReadInput();
-                Console.ReadLine();
+               // Console.WriteLine("Welcome to Address Book Progam \n");
+                //CreateAddressBook createAddressBook = new CreateAddressBook();
+                //createAddressBook.ReadInput();
+                //Console.ReadLine();
             }
+            //Showing Welcome Message On console.
+            Console.WriteLine("Welcome to Address Book Progam \n");
+            CreateAddressBook createAddressBook = new CreateAddressBook();
+            createAddressBook.ReadInput();
+            Console.ReadLine();
         }
     }
 }
