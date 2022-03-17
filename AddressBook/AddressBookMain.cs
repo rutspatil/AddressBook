@@ -30,6 +30,7 @@ namespace AddressBook
             }
             else
                 Console.WriteLine("No Contacts is AddressBook");
+                Console.WriteLine("No Contacts in AddressBook");
         }
 
         //Method to Edit Contact 
@@ -89,5 +90,18 @@ namespace AddressBook
                     Console.WriteLine("No Contact With this Name!");
             }
         }
+        //Method to Delete a Person
+        public void DeleteContact(string dName)
+        {
+            foreach (Contacts ct in this.contactList)
+            {
+                if (ct.firstName.Equals(dName))
+                {
+                    this.contactList.Remove(ct);
+                    Console.WriteLine("Contact Deleted!");
+                    break;
+                }
+            }
+        }  
     }
 }
